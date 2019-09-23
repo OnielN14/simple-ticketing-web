@@ -1,0 +1,51 @@
+.welcome-content{
+    position: relative;
+    min-height: 100vh;
+    background-image:url('/img/hero.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .hero-text{
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0,0,0,0.35);
+        text-align: center;
+
+        .title{
+            color:white;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        .description{
+            color:white;
+            font-size: 2rem;
+        }
+
+        .btn{
+            font-size: 2rem;
+
+            &.btn-primary{
+                background: none;
+                border: 2px solid white;
+                border-radius: 0px;
+
+                &:hover{
+                    background: white;
+                    color:black;
+                }
+            }
+        }
+    }
+
+
+}
