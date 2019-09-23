@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['prefix' => 'ticket'], function(){
+    Route::get('/', 'TicketController@index');
+    Route::post('/store', 'TicketController@store');
+    Route::post('/check-in', 'TicketController@checkIn');
+    Route::post('/delete/{id}', 'TicketController@delete');
+    Route::post('/update/{id}', 'TicketController@update');
+    Route::post('/find/{id}', 'TicketController@show');
+    Route::post('/approve/{id}', 'TicketController@approve');
+});

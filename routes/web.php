@@ -17,16 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/app', function(){
-    return view('layouts.app-vue');
-});
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/get-ticket', function(){
     return view('pages.get-ticket');
 });
@@ -35,3 +25,6 @@ Route::get('/check-in', function(){
     return view('pages.check-in');
 });
 
+Route::group(['prefix'=>'dashboard', 'middleware'=>'auth'], function(){
+    Route::get('/', 'DashboardController@index')->name('home');
+});

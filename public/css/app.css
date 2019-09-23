@@ -10691,6 +10691,12 @@ a.text-dark:focus {
 .welcome-content > .hero-text .description {
   color: white;
   font-size: 2rem;
+  margin-bottom: 0px;
+}
+
+.welcome-content > .hero-text .event-date {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .welcome-content > .hero-text .btn {
@@ -10708,9 +10714,51 @@ a.text-dark:focus {
   color: black;
 }
 
+.check-in-content {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-ticket-registration {
+  position: relative;
+}
+
 @media screen and (min-width: 1200px) {
   .get-ticket-registration.container {
-    max-width: 1024px;
+    max-width: 768;
   }
+}
+
+.get-ticket-registration a.brand {
+  font-size: 3rem;
+  color: black;
+}
+
+.get-ticket-registration a.brand:hover {
+  text-decoration: none;
+}
+
+.get-ticket-registration img.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  z-index: 1;
+}
+
+.get-ticket-registration form {
+  z-index: 2;
 }
 

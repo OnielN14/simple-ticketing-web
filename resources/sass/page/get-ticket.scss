@@ -1,9 +1,35 @@
 .get-ticket-registration{
+    position: relative;
 
     &.container{
         @media screen and(min-width:1200px) {
-            max-width: 1024px;
+            max-width: 768;
         }
+    }
+
+    a.brand{
+        font-size: 3rem;
+        color:black;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    img.backdrop{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top:0px;
+        left:0px;
+        object-fit: cover;
+        object-position: center;
+        filter:blur(2px);
+        z-index: 1;
+    }
+
+    form{
+        z-index: 2;
     }
 
 }

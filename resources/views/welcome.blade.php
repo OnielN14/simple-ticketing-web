@@ -5,6 +5,7 @@
             <main>
                 <h1 class="title">Music Party</h1>
                 <p class="description">Get Your Ticket.Rock Your Night.Live Up Your Life.</p>
+                <p class="event-date">28th September 2019</p>
                 <a class="btn btn-primary" href="/get-ticket">Get Ticket</a>
             </main>
         </div>
